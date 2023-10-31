@@ -20,11 +20,12 @@ console.log(solve([[1,2], [4,4], [5, 6,6]]));
 console.log(solve([[1,2], [3,4], [5, 6]]));
 
 
-const encodeDupes = str => {
-  const arr = str.toLowerCase().split('')
-  return arr.map(letter => {
-    return (arr.indexOf(letter) === arr.lastIndexOf(letter)) ? '(' : ')'}).join('')
-}
+const encodeDupes = str => str
+    .toLowerCase()
+    .split('')
+    .map((c, i, a) => (arr.indexOf(letter) === arr.lastIndexOf(letter)) ? '(' : ')'})
+    .join('');
+
 
 console.log(encodeDupes('din'))
 console.log(encodeDupes('recede'))
