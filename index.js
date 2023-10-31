@@ -20,13 +20,13 @@ console.log(solve([[1,2], [4,4], [5, 6,6]]));
 console.log(solve([[1,2], [3,4], [5, 6]]));
 
 
-const test = str => {
+const encodeDupes = str => {
   const arr = str.toLowerCase().split('')
   return arr.map(letter => {
     return (arr.indexOf(letter) === arr.lastIndexOf(letter)) ? '(' : ')'}).join('')
 }
 
-console.log(test('din'))
-console.log(test('recede'))
-console.log(test('Success'))
-console.log(test('(( @'))
+console.log(encodeDupes('din'))
+console.log(encodeDupes('recede'))
+console.log(encodeDupes('Success'))
+console.log(encodeDupes('(( @'))
